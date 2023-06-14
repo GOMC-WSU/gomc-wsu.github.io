@@ -1,6 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+#containerFlexible {
+  max-width: 100%;
+  margin: auto;
+  line-height: 1.5;
+}
+
 body {
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .logo {
@@ -32,3 +55,40 @@ body {
   color: lightblue;
 }
 
+.footbar {
+  width: 100%;
+  padding: 5px;
+  margin-top: 10px;
+  background-color: rgb(7, 139, 172);
+  overflow: auto;
+}
+
+.copyright {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  float: center;
+  font-size: small;
+  overflow: auto;
+}
+
+.footLinks {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  float: center;
+  font-size: small;
+  overflow: auto;
+}
+
+.footLinks a {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: small;
+}
+
+.center {
+  margin: auto;
+  text-align: center;
+}
