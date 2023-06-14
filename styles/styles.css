@@ -2,8 +2,12 @@
   box-sizing: border-box;
 }
 
-#containerFlexible {
-  max-width: 100%;
+a, u {
+  text-decoration: none;
+}
+
+.containerFlexible {
+  max-width: 80%;
   margin: auto;
   line-height: 1.5;
 }
@@ -16,16 +20,21 @@ body {
 .column {
   float: left;
   width: 50%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  padding: 5px;
 }
 
 .row:after {
   content: "";
   display: table;
   clear: both;
+  margin: auto;
 }
 
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
 .logo {
   float: left;
   padding: 5px;
@@ -91,4 +100,33 @@ body {
 .center {
   margin: auto;
   text-align: center;
+}
+
+.centerImage {
+  display: block;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.blueBlock {
+  margin: auto;
+  background-color: rgb(7, 139, 172);
+  color: white;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.paragraphBlock {
+  margin: auto;
+  padding: 10px;
+  font-size: medium;
+  line-height: 2.0;
+}
+
+.customIndent {
+  padding-left: 2em;
 }

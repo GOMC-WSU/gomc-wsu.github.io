@@ -13,15 +13,188 @@
   
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/slideshow.css">
 </head>
 
 <body>
   <!-- insert navigation bar -->
   <script id="insert_menu" src="scripts/nav.js"></script>
 
-  <div>
-    This future GOMC Website repository is under construction.  The current GOMC Website 
-    is available here: <a href="http://gomc.eng.wayne.edu/">http://gomc.eng.wayne.edu/</a>
+  <br>
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 6</div>
+      <img class="slide_sz" src="images/gomc/index_slide_1.png" alt="Alchemical Transformation" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 6</div>
+      <img class="slide_sz" src="images/gomc/index_slide_2.png" alt="Molecular Exchange" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 6</div>
+      <img class="slide_sz" src="images/gomc/index_slide_3.png" alt="DPC Martini" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 6</div>
+      <img class="slide_sz" src="images/gomc/index_slide_4.png" alt="4th Rotating Image" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 6</div>
+      <img class="slide_sz" src="images/gomc/index_slide_5.png" alt="5th Rotating Image" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">6 / 6</div>
+      <img class="slide_sz" src="images/gomc/index_slide_6.png" alt="6th Rotating Image" style="width:100%">
+    </div>
+
+  </div>
+  <br>
+  <script id="auto_slideshow" src="scripts/slides.js"></script>
+
+  <div class="containerFlexible">
+    <div class="center">
+      This future GOMC Website repository is under construction.  The current GOMC Website 
+      is available here: <a href="http://gomc.eng.wayne.edu/">http://gomc.eng.wayne.edu/</a>
+    </div>
+    <br>
+    
+    <div class="row">
+      <div class="blueBlock">
+        <p>GPU Optimized Monte Carlo (GOMC)</p>
+      </div>
+      <p class="paragraphBlock">
+        GOMC is open-source software for simulating molecular systems using the 
+        Metropolis Monte Carlo algorithm. The software has been written in 
+        object oriented C++, and uses OpenMP and NVIDIA CUDA to allow for 
+        execution on multi-core CPU and GPU architectures. GOMC employs 
+        widely-used simulation file types (PDB, PSF, CHARMM-style parameter 
+        files) . GOMC can be used to study vapor–liquid equilibria, adsorption 
+        in porous materials, surfactant self-assembly, and condensed phase 
+        structure for complex molecules. To learn more about GOMC, please refer 
+        to our 
+        <a href="http://gomc.eng.wayne.edu/documentation/">documentation</a> 
+        and recently published 
+        <a href="https://doi.org/10.1016/j.softx.2018.11.005">GOMC paper.</a>
+      </p>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <div class="blueBlock">
+          <p>Ensembles</p>
+        </div>
+        <p class="paragraphBlock center">
+          GOMC supports simulations in a variety of ensembles, which include:
+        </p>
+        <ul class="paragraphBlock customIndent">
+          <li>Canonical</li>
+          <li>Isothermal–isobaric</li>
+          <li>Grand canonical</li>
+          <li>Gibbs ensemble (constant volume and pressure)</li>
+        </ul>
+      </div>
+      <div class="column">
+        <div class="blueBlock">
+          <p>Force fields</p>
+        </div>
+        <p class="paragraphBlock center">
+          GOMC supports a variety of all-atom, united atom, and coarse grained force fields such as:
+        </p>
+        <ul class="paragraphBlock customIndent">
+          <li>OPLS</li>
+          <li>CHARMM</li>
+          <li>TraPPE</li>
+          <li>Mie</li>
+          <li>Martini</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <div class="blueBlock">
+          <p>Molecule</p>
+        </div>
+        <p class="paragraphBlock center">
+          GOMC supports a variety of molecular topologies:  
+        </p>
+        <ul class="paragraphBlock customIndent">
+          <li>Linear molecules using <a href="https://pubs.acs.org/doi/abs/10.1021/jp984742e">configurational-bias</a></li>
+          <li>Branched molecules using <a href="https://pubs.acs.org/doi/abs/10.1021/jp984742e">coupled-decoupled configurational-bias</a></li>
+          <li>Cyclic molecules using combination of 
+            <a href="https://pubs.acs.org/doi/abs/10.1021/jp984742e">coupled-decoupled configurational-bias</a> 
+            and 
+            <a href="https://aip.scitation.org/doi/abs/10.1063/1.3644939">crankshaft</a>
+            to sample intramolecular degrees of freedom of cyclic molecules</li>
+        </ul>
+      </div>
+      <div class="column">
+        <div class="blueBlock">
+          <p>Monte Carlo moves</p>
+        </div>
+        <p class="paragraphBlock center">
+          GOMC supports a variety of Monte Carlo moves, such as:
+        </p>
+        <ul class="paragraphBlock customIndent">
+          <li>Rigid-body displacement</li>
+          <li>Rigid-body rotation</li>
+          <li><a href="https://aip.scitation.org/doi/full/10.1063/1.2745293">Forced-bias multi-particle</a> displacement and rotation</li>
+          <li>Molecular regrowth using 
+            <a href="https://pubs.acs.org/doi/abs/10.1021/jp984742e">coupled-decoupled configurational-bias</a></li>
+          <li>Crankshaft using a combination of 
+            <a href="https://aip.scitation.org/doi/abs/10.1063/1.438608">crankshaft</a>
+             and 
+            <a href="https://pubs.acs.org/doi/abs/10.1021/jp984742e">coupled-decoupled configurational-bias</a></li>
+          <li>Intra-box swap using <a href="https://pubs.acs.org/doi/abs/10.1021/jp984742e">coupled-decoupled configurational-bias</a></li>
+          <li>Intra-box <a href="https://aip.scitation.org/doi/abs/10.1063/1.5025184">Molecular Exchange Monte Carlo</a></li>
+          <li>Inter-box swap using <a href="https://pubs.acs.org/doi/abs/10.1021/jp984742e">coupled-decoupled configurational-bias</a></li>
+          <li>Inter-box <a href="https://www.sciencedirect.com/science/article/pii/S0378381218305351">Molecular Exchange Monte Carlo</a></li>
+          <li>Volume exchange (isotropic and anisotropic)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="blueBlock">
+        <p>Announcements</p>
+      </div>
+      <ul class="paragraphBlock customIndent">
+        <li>Version 2.75a released on 6/30/2022</li>
+        <li>Version 2.70 released on 10/13/2020</li>
+        <li>Version 2.60 released on 6/16/2020</li>
+        <li>Version 2.50 released on 1/20/2020</li>
+      </ul>
+    </div>
+
+    <div class="row">
+      <div class="blueBlock">
+        <p>New and Upcoming Features</p>
+      </div>
+      <div class="column">
+        <img class="centerImage" src="images/gomc/brownian_multi-particle_mc_move.png" alt="Brownian like multi-particle MC move">
+        <h3 class="center">Brownian like multi-particle MC move</h2>
+        <p class="paragraphBlock center">
+          In release 2.75, GOMC added support for the 
+          <a href="https://www.tandfonline.com/doi/full/10.1080/08927022.2013.804183">multi-particle MC move with Brownian like motion</a>
+          , where all molecules will displace or rotate simultaneously.
+        </p>
+      </div>
+      <div class="column">
+        <img class="centerImage" src="images/gomc/parallel_tempering.png" alt="Parallel Tempering">
+        <h3 class="center">Parallel Tempering</h2>
+        <p class="paragraphBlock center">
+          In a future release, GOMC will add support for parallel tempering 
+          and replica exchange in NVT, NPT, GCMC, and GEMC simulations. In 
+          GOMC, each replica can be run in parallel, using OpenMP.
+        </p>
+      </div>
+    </div>
   </div>
 
   <!-- insert footer -->
