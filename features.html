@@ -19,6 +19,170 @@
   <!-- insert navigation bar -->
   <script id="insert_menu" src="scripts/nav.js"></script>
 
+  <div class="containerFlexible">
+    <div class="row">
+      <div class="column">
+        <img class="featureImage" src="images/features/Vapor-Liquid-Equilibrium.png" alt="Vapor-Liquid Graph">
+      </div>
+      <div class="column">
+        <div class="blueBlock">
+          <p>Vapor-Liquid Equilibrium</p>
+        </div>
+        <p class="paragraphBlock">
+          GOMC is capable of performing Gibbs ensemble Monte Carlo and grand 
+          canonical histogram-reweighting Monte Carlo simulations to predict 
+          the vapor-liquid equilibria of pure components and multicomponent 
+          mixtures.  A variety of advanced configurational-bias algorithms, 
+          such as coupled-decoupled configurational-bias, molecular exchange 
+          Monte Carlo, configurational-bias regrowth, and crankshaft, are 
+          included to enhance the sampling of phase space.
+        </p>
+      </div>
+    </div>
+    <hr class="siteBlue">
+
+    <div class="row">
+      <div class="column">
+        <img class="featureImage" src="images/features/Adsorption.png" alt="Adsorption Graphic">
+      </div>
+      <div class="column">
+        <div class="blueBlock">
+          <p>Adsorption</p>
+        </div>
+        <p class="paragraphBlock">
+          GOMC supports simulations of adsorption in rigid porous materials 
+          and can be used for high through put screening of materials for 
+          gas storage and separation.  A tool to take structures from the 
+          <a href="http://gregchung.github.io/CoRE-MOFs/">CoRE database</a> 
+          and automatically setup simulations for high 
+          throughput screening may be found in our 
+          <a href="https://github.com/GOMC-WSU/Workshop/tree/HTS">GitHub repository</a>.
+          <br>
+          In the future, our HTS code will be integrated into the Molecular 
+          Simulation Design Framework (
+          <a href="https://github.com/mosdef-hub">MoSDeF</a>
+          ) toolkit.
+        </p>
+      </div>
+    </div>
+    <hr class="siteBlue">
+
+    <div class="row">
+      <div class="column">
+        <img class="featureImage" src="images/features/Force-Field-Optimization.jpeg" alt="Adsorption Graphic">
+      </div>
+      <div class="column">
+        <div class="blueBlock">
+          <p>Force Field Optimization</p>
+        </div>
+        <p class="paragraphBlock">
+          GOMC has been widely used to optimize the non-bonded potential potential, 
+          using grand canonical histogram-reweighting Monte Carlo simulation. In 
+          addition, GOMC simulation output (simulation frame) can be combined with 
+          Multistate Bennett Acceptance Ratio (
+          <a href="https://pubs.acs.org/doi/pdf/10.1021/acs.jced.8b01232">MBAR</a>
+          ) to predict phase equilibria properties for an arbitrary force field 
+          parameter set that has not been simulated directly.
+        </p>
+      </div>
+    </div>
+    <hr class="siteBlue">
+
+    <div class="row">
+      <div class="column">
+        <img class="featureImage" src="images/features/Gibbs-Free-Energy-of-Solvation.png" alt="Gibbs Free Energy Image">
+      </div>
+      <div class="column">
+        <div class="blueBlock">
+          <p>Gibbs Free Energy of Solvation</p>
+        </div>
+        <p class="paragraphBlock">
+          GOMC can predict Gibbs free energy of solvation in NPT Gibbs ensemble 
+          Monte Carlo simulation. Using the 
+          <a href="https://www.sciencedirect.com/science/article/pii/S0378381218305351">Molecular Exchange Monte Carlo move (MEMC)</a>
+          , the solute can be inserted into the dense system more efficiently. 
+          The ratio of number density between two phases at equilibrium, yield 
+          the Gibbs free energy of transfer. 
+        </p>
+      </div>
+    </div>
+    <hr class="siteBlue">
+
+    <div class="row">
+      <div class="column">
+        <img class="featureImage" src="images/features/Free-Energy-Calculation.png" alt="Free Energy Graphic">
+      </div>
+      <div class="column">
+        <div class="blueBlock">
+          <p>Free Energy Calculation</p>
+        </div>
+        <p class="paragraphBlock">
+          GOMC supports free energy calculation in NVT and NPT ensemble, using 
+          thermodynamic integration (TI) and free energy perturbation (FEP) 
+          methods, such as BAR and MBAR. Post analysis of GOMC energy output 
+          can be done using 
+          <a href="https://github.com/alchemistry/alchemlyb#shirts2008">alchemlyb</a> 
+          python library. 
+        </p>
+      </div>
+    </div>
+    <hr class="siteBlue">
+
+    <div class="row">
+      <div class="column">
+        <img class="featureImage" src="images/features/Condensed-Phase-Structure.png" alt="Condensed Phase Structure Graphic">
+      </div>
+      <div class="column">
+        <div class="blueBlock">
+          <p>Condensed Phase Structure</p>
+        </div>
+        <p class="paragraphBlock">
+          GOMC can perform simulations in the NVT and NPT ensembles.  GOMC 
+          outputs atomic coordinates in PDB and molecule connectivity in PSF 
+          format.  This allows for straightforward visualization and analysis 
+          in 
+          <a href="https://www.ks.uiuc.edu/Research/vmd/">VMD</a>.
+        </p>
+      </div>
+    </div>
+    <hr class="siteBlue">
+
+    <div class="row">
+      <div class="column">
+        <img class="featureImage" src="images/features/Support-for-a-wide-range-of-molecule-topologies.png" alt="Molecule Topologies Graphic">
+      </div>
+      <div class="column">
+        <div class="blueBlock">
+          <p>Support for a wide range of molecule topologies</p>
+        </div>
+        <p class="paragraphBlock">
+          With GOMC, one can simulate nearly any molecular topology, including 
+          multiple rings connected by flexible linkers.
+        </p>
+      </div>
+    </div>
+    <hr class="siteBlue">
+
+    <div class="row">
+      <div class="column">
+        <img class="featureImage" src="images/features/High-Performace.png" alt="High Performance Charts">
+      </div>
+      <div class="column">
+        <div class="blueBlock">
+          <p>High Performance</p>
+        </div>
+        <p class="paragraphBlock">
+          GOMC exhibits both high sampling efficiency as well as excellent 
+          computational performance.  GOMC has excellent single core 
+          performance, and also runs on multi-core CPUs using thread-level 
+          OpenMP parallelization, and on GPUs if available.  Simulations of 
+          systems from ten to tens of thousands of atoms may be simulated 
+          efficiently with GOMC.
+        </p>
+      </div>
+    </div>
+  </div>
+
   <!-- insert footer -->
   <script id="insert_footer" src="scripts/foot.js"></script>
 </body>
