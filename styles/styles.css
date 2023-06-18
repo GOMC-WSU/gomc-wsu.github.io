@@ -72,6 +72,10 @@ body {
   overflow: auto;
 }
 
+.footbar a:hover {
+  color: lightblue;
+}
+
 .copyright {
   padding: 10px;
   color: white;
@@ -123,6 +127,14 @@ body {
   padding: 10px;
   font-size: medium;
   line-height: 2.0;
+}
+
+.paragraphBlock a {
+  color: rgb(7, 139, 172);
+}
+
+.paragraphBlock a:hover {
+  color: lightblue;
 }
 
 .customIndent {
