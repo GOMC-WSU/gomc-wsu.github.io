@@ -190,3 +190,28 @@ body {
   font-weight: bold;
   font-size: medium;
 }
+
+.face {
+  background-color: rgb(240, 240, 240);
+  color: rgb(85, 83, 83);
+  padding: 1rem;
+  max-height: 18rem;
+}
+
+.gridBlock {
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  line-height: 1.25;
+  font-size: medium;
+  text-decoration-color: black;
+}
+
+@media (min-width: 600px) {
+  .gridBlock { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 900px) {
+  .gridBlock { grid-template-columns: repeat(3, 1fr); }
+}
