@@ -218,7 +218,11 @@
 
       <p class="paragraphBlock">
         To view previous discussion and ask question, reach us at:
-        <a href="https://app.gitter.im/#/room/#GOMC_WSU_Lobby:gitter.im">GOMC Gitter</a>.
+        <script>
+          var gitterLink = "https://app.gitter.im/#/room/#GOMC_WSU_Lobby:gitter.im";
+          var gitterLinkEncoded = encodeURI(gitterLink);
+          document.write("<a href=\"" + gitterLinkEncoded + "\">GOMC Gitter</a>");
+        </script>
       </p>
     </div>
 
