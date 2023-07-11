@@ -7,9 +7,6 @@ on:
   push:
     branches:
       - main
-  schedule:
-    # run every day at 00:00 UTC
-    - cron: '0 0 * * *'
 
 jobs:
   validate:
@@ -24,4 +21,3 @@ jobs:
         with:
           root: ./
           css: true
-          
