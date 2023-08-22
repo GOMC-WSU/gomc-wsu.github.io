@@ -25,7 +25,7 @@ jobs:
       - name: amend linkceckerrc to ignore 403 errors
         run: |
             echo "ls -a ~/"
-            la -a ~/
+            ls -a ~/
             echo "ls -a ~/.config/"
             ls -a ~/.config/
             echo "ls -a ~/.config/linkchecker/"
