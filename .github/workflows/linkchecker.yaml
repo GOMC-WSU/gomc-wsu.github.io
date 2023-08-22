@@ -32,6 +32,10 @@ jobs:
             pwd
             ls -a
 
+            cd /home/runner/.config
+            pwd
+            ls -a
+
             sed -i '/#ignoreerrors=/a ignoreerrors=^http* ^403 Forbidden' /home/runner/linkcheckerrc
       - name: run linkchecker
         run: |
