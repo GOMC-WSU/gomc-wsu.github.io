@@ -28,7 +28,11 @@ jobs:
             pwd
             find ~/ -name linkcheckerrc
 
-            sed -i '/#ignoreerrors=/a ignoreerrors=^http* ^403 Forbidden' ~/.config/linkchecker/linkcheckerrc
+            cd /home/runner
+            pwd
+            ls -a
+
+            sed -i '/#ignoreerrors=/a ignoreerrors=^http* ^403 Forbidden' /home/runner/linkcheckerrc
       - name: run linkchecker
         run: |
           cd $GITHUB_WORKSPACE/
