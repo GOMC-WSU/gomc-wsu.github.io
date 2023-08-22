@@ -36,6 +36,18 @@ jobs:
             pwd
             ls -a
 
+            cd /home/runner/.config/GitHub
+            pwd
+            ls -a
+
+            cd /home/runner/.config/cni
+            pwd
+            ls -a
+            
+            cd /home/runner/.config/configstore
+            pwd
+            ls -a
+            
             sed -i '/#ignoreerrors=/a ignoreerrors=^http* ^403 Forbidden' /home/runner/linkcheckerrc
       - name: run linkchecker
         run: |
