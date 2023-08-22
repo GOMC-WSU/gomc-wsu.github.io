@@ -25,6 +25,7 @@ jobs:
       - name: amend linkceckerrc to ignore 403 errors
         run: |
             cd $GITHUB_WORKSPACE/
+            cd ..
             echo "ls -a"
             ls -a
             echo "ls -a .linkchecker/"
