@@ -24,8 +24,8 @@ jobs:
           pip3 install linkchecker requests
       - name: amend linkceckerrc to ignore 403 errors
         run: |
-            cd $GITHUB_WORKSPACE/
-            cd ..
+            cd
+            pwd
             echo "ls -a"
             ls -a
             echo "ls -a .linkchecker/"
