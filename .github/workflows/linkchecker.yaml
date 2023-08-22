@@ -26,14 +26,8 @@ jobs:
         run: |
             cd
             pwd
-            echo "ls -a"
-            ls -a
-            echo "ls -a .config/"
-            ls -a .config/
+            find ~/ -name linkcheckerrc
 
-            echo "ls -a .config/linkchecker/"
-            ls -a .config/linkchecker/
-            
             sed -i '/#ignoreerrors=/a ignoreerrors=^http* ^403 Forbidden' ~/.config/linkchecker/linkcheckerrc
       - name: run linkchecker
         run: |
