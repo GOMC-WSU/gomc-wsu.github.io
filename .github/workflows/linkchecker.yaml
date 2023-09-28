@@ -22,9 +22,9 @@ jobs:
         run: |
           pip3 install --upgrade pip
           pip3 install linkchecker requests
-      - name: amend linkceckerrc to ignore 403 errors
+      - name: amend linkcheckerrc to ignore 403 errors
         run: |
-            find / -name linkcheckerrc
+            find $HOME -type d -name '.config'
             sed -i '/#ignoreerrors=/a ignoreerrors=^http* ^403 Forbidden' /.config/linkchecker/linkcheckerrc
       - name: run linkchecker
         run: |
