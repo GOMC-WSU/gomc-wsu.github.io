@@ -25,6 +25,7 @@ jobs:
       - name: amend linkcheckerrc to ignore 403 errors
         run: |
             find $HOME -type d -name '.config'
+            ls -a $HOME/.config
             sed -i '/#ignoreerrors=/a ignoreerrors=^http* ^403 Forbidden' /home/runner/.config/linkchecker/linkcheckerrc
       - name: run linkchecker
         run: |
