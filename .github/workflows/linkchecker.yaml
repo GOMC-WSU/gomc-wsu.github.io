@@ -21,7 +21,7 @@ jobs:
       - name: Install Dependencies
         run: |
           apt update
-          apt install tree
+          apt install tree -y
           pip3 install --upgrade pip
           pip3 install linkchecker requests
       - name: amend linkcheckerrc to ignore 403 errors
