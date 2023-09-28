@@ -24,8 +24,8 @@ jobs:
           pip3 install linkchecker requests
       - name: amend linkceckerrc to ignore 403 errors
         run: |
-            find /home/runner/ -name linkcheckerrc
-            sed -i '/#ignoreerrors=/a ignoreerrors=^http* ^403 Forbidden' /home/runner/.local/lib/python3.10/site-packages/linkcheck/data/linkcheckerrc
+            find /home/ -name linkcheckerrc
+            sed -i '/#ignoreerrors=/a ignoreerrors=^http* ^403 Forbidden' /home/.config/linkchecker/linkcheckerrc
       - name: run linkchecker
         run: |
           cd $GITHUB_WORKSPACE/
