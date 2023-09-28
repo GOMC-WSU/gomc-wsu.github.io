@@ -20,6 +20,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Install Dependencies
         run: |
+          apt update
+          apt install tree
           pip3 install --upgrade pip
           pip3 install linkchecker requests
       - name: amend linkcheckerrc to ignore 403 errors
