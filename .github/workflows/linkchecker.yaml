@@ -25,7 +25,7 @@ jobs:
       - name: amend linkceckerrc to ignore 403 errors
         run: |
             find /home/runner/ -name linkcheckerrc
-            sed -i '/#ignoreerrors=/a ignoreerrors=^http* ^403 Forbidden' /home/runner/.config/linkchecker/linkcheckerrc
+            sed -i '/#ignoreerrors=/a ignoreerrors=^http* ^403 Forbidden' /home/runner/.local/lib/python3.10/site-packages/linkcheck/data/linkcheckerrc
       - name: run linkchecker
         run: |
           cd $GITHUB_WORKSPACE/
