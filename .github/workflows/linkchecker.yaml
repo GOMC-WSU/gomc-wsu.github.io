@@ -28,10 +28,10 @@ jobs:
         run: |
           file_path=$(find /home/runner/.local/lib/python3.* -name linkcheckerrc)
           echo "linkcheckerrc located here: $file_path"
-          echo "::set-output name=file_path::$file_path"
+          echo "file_path=$file_path" >> $GITHUB_STATE
       - name: amend linkcheckerrc to ignore 403 errors
         run: |
-          sed -i '/#ignoreerrors=/a ignoreerrors=\n ^http* ^403 Forbidden\n ^http* ^418 Unknown Code' ${{ steps.find-file.outputs.file_path }}
+          sed -i '/#ignoreerrors=/a ignoreerrors=\n ^http* ^403 Forbidden\n ^http* ^418 Unknown Code' $(echo ${{ state.file_path }})
       - name: run linkchecker
         run: |
           cd $GITHUB_WORKSPACE/
