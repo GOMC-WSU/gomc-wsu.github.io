@@ -3,11 +3,11 @@ on:
   pull_request:
     branches:
       - main
-      - LinkChecker
+      - find_linkcheckerrc
   push:
     branches:
       - main
-      - LinkChecker
+      - find_linkcheckerrc
   schedule:
     # run every Sunday at 00:00 UTC
     - cron: '0 0 * * 0'
@@ -23,9 +23,15 @@ jobs:
           pip3 install --upgrade pip
           pip3 install linkchecker==10.2.1
           pip3 install requests
+      - name: search for linkcheckerrc file
+        id: find-file
+        run: |
+          file_path=$(find /home/runner/.local/lib/python3.* -name linkcheckerrc)
+          echo "linkcheckerrc located here: $file_path"
+          echo "file_path=$file_path" >> $GITHUB_OUTPUT
       - name: amend linkcheckerrc to ignore 403 errors
         run: |
-            sed -i '/#ignoreerrors=/a ignoreerrors=\n ^http* ^403 Forbidden\n ^http* ^418 Unknown Code' /home/runner/.local/lib/python3.10/site-packages/linkcheck/data/linkcheckerrc
+          sed -i '/#ignoreerrors=/a ignoreerrors=\n ^http* ^403 Forbidden\n ^http* ^418 Unknown Code' $(echo ${{ steps.find-file.outputs.file_path }})
       - name: run linkchecker
         run: |
           cd $GITHUB_WORKSPACE/
