@@ -17,11 +17,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v7
+        uses: actions/checkout@v7.0.1
       - name: Install Dependencies
         run: |
           pip3 install --upgrade pip
-          pip3 install linkchecker==10.2.1
+          pip3 install linkchecker==10.6.0
           pip3 install requests
       - name: search for linkcheckerrc file
         id: find-file
