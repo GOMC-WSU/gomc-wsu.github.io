@@ -37,4 +37,4 @@ jobs:
           cd $GITHUB_WORKSPACE/
           nohup python3 -m http.server </dev/null >/dev/null 2>&1 &
           export LOCAL_HOST=$(hostname -i)
-          linkchecker --verbose --check-extern http://${LOCAL_HOST}:8000/nav.html
+          linkchecker --verbose --check-extern https://${LOCAL_HOST}:8000/nav.html
