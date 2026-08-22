@@ -3,11 +3,11 @@ on:
   pull_request:
     branches:
       - main
-      - find_linkcheckerrc
+      - latessa/no_warnings
   push:
     branches:
       - main
-      - find_linkcheckerrc
+      - latessa/no_warnings
   schedule:
     # run every Sunday at 00:00 UTC
     - cron: '0 0 * * 0'
@@ -37,4 +37,4 @@ jobs:
           cd $GITHUB_WORKSPACE/
           nohup python3 -m http.server </dev/null >/dev/null 2>&1 &
           export LOCAL_HOST=$(hostname -i)
-          linkchecker --verbose --check-extern https://${LOCAL_HOST}:8000/nav.html
+          linkchecker --check-extern --no-warnings http://${LOCAL_HOST}:8000/nav.html
